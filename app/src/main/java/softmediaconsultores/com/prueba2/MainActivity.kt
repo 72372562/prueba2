@@ -19,12 +19,8 @@ class MainActivity : AppCompatActivity() {
         listar()
     }
     private fun listar(){
-        val circulo = R.id.imagen
-        var rnd = Random(circulo)
-        val colores: Int = android.graphics.Color.argb (255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
-        for(i in 1..2){
+        val circulo = R.drawable.item
 
-        }
         val color = Color("#ffffff", circulo)
 
         val listaColores = listOf(color)
