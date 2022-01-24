@@ -3,13 +3,13 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 32
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "softmediaconsultores.com.prueba2"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
@@ -22,7 +22,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+        buildFeatures{
+            viewBinding true
+            dataBinding = true
+        }
+    }
 }
 
 dependencies {
